@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 public class Main {
 
     /**
-     * Method main is enterance point of app
+     * Method main is entrance point of app
      * @param args array of arguments
      */
     public static void main(String[] args) {
@@ -14,7 +14,13 @@ public class Main {
         System.out.println("Hello and welcome!");
 
         printNumbers1To5();
-        System.out.println("Diagonal of triangle is " +calculateDiagonal(4.5, 3.5) +" centimeters long");
+
+        double a = 4.5;
+        double b = 3.5;
+        System.out.println("Diagonal of triangle is " +calculateDiagonal(a, b) +" centimeters long");
+        a = 6.4;
+        b = 4.2;
+        System.out.println("Diagonal of triangle is " +calculateDiagonal(a, b) +" centimeters long");
     }
 
     private static void printNumbers1To5() {
@@ -26,10 +32,6 @@ public class Main {
     }
 
     private static double calculateDiagonal(double a, double b){
-        //double a = 3.5;
-        //double b = 4.5;
-        double c = Math.sqrt((a * a) + (b * b));
-        //System.out.println("");
-        return c;
+        return Math.sqrt((a * a) + (b * b));
     }
 }
